@@ -4,10 +4,10 @@ $(document).ready(function () {
     selectedAmenities = {};
     $('div.amenities ul.popover li input:checked').each(function () {
       let amenity = $(this);
-      selectedAmens[amenity.attr('data-id')] = amenity.attr('data-name');
+      selectedAmenities[amenity.attr('data-id')] = amenity.attr('data-name');
     });
-    if (!$.isEmptyObject(selectedAmens)) {
-      $('div.amenities h4').text(Object.values(selectedAmens).join(', '));
+    if (!$.isEmptyObject(selectedAmenities)) {
+      $('div.amenities h4').text(Object.values(selectedAmenities).join(', '));
     } else {
       $('div.amenities h4').text('\xA0');
     }
