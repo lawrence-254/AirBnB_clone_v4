@@ -18,4 +18,10 @@ $.get('http://0.0.0.0:5001/api/v1/status/', function(data) {
     $('div#api_status').addClass('available');
   }
 });
-
+$.ajax({
+  url: 'http://0.0.0.0:5001/api/v1/places_search/',
+  type: 'POST',
+  data: '{}',
+  dataType: 'json',
+  contentType: 'application/json',
+  success: function (data) {
