@@ -13,7 +13,7 @@
      javascript and jquery links
     =============================-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="/static/scripts/2-hbnb.js"></script>
+    <script type="text/javascript" src="/static/scripts/3-hbnb.js"></script>
     <!-- ===============================
     end of javascript and jquery imports
     ==================================-->
@@ -58,29 +58,14 @@
         <!-- End of Amenities -->
 	<button type="button">Search</button>
       </section>
-      <div class="placesh1"><h1>Places</h1></div>
-      <section class="places">
-	<!-- <h1>Places</h1> -->
-	{% for place in places %}
-	<article>
-	  <div class="title_box">
-	    <h2>{{ place.name }}</h2>
-	    <div class="price_by_night">${{ place.price_by_night }}</div>
-	  </div>
-	  <div class="information">
-	    <div class="max_guest">{{ place.max_guest }} Guest{% if place.max_guest != 1 %}s{% endif %}</div>
-            <div class="number_rooms">{{ place.number_rooms }} Bedroom{% if place.number_rooms != 1 %}s{% endif %}</div>
-            <div class="number_bathrooms">{{ place.number_bathrooms }} Bathroom{% if place.number_bathrooms != 1 %}s{% endif %}</div>
-	  </div>
-	  <div class="user">
-            <b>Owner:</b> {{ place.user.first_name }} {{ place.user.last_name }}
-          </div>
-          <div class="description">
-	    {{ place.description | safe }}
-          </div>
-	</article>
-	{% endfor %}
-      </section>
+<!--'''''''''''''''''''''''''
+This Is The Section for places
+''''''''''''''''''''''''''-->
+
+
+<!--'''''''''''''''''''''''''
+End of The Section for places
+''''''''''''''''''''''''''-->
     </div>
     <footer>
       <p>Holberton School</p>
